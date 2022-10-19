@@ -52,11 +52,10 @@ type Results struct {
 
 func generateWelcomeHeader() {
 	pterm.DefaultCenter.WithCenterEachLineSeparately().Println("Strings!\n" + VERSION)
-	// Generate BigLetters
 	s, _ := pterm.DefaultBigText.WithLetters(putils.LettersFromString("Strings")).Srender()
-	pterm.DefaultCenter.Println(s) // Print BigLetters with the default CenterPrinter
+	pterm.DefaultCenter.Println(s)
 
-	pterm.DefaultCenter.WithCenterEachLineSeparately().Println("👋 Please garb the location where you find the strings.")
+	pterm.DefaultCenter.WithCenterEachLineSeparately().Println("👋 Please grab the location where you find the strings.")
 }
 
 func (m Model) startWork(dirPath string) tea.Cmd {
